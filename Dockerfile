@@ -1,9 +1,6 @@
 
 FROM continuumio/miniconda3
 
-RUN apt-get update && apt-get install -y \
-  gcc
-  
 RUN git clone https://github.com/2133649586/Coronavirus-Tracker
 
 RUN conda install -c conda-forge yarn
