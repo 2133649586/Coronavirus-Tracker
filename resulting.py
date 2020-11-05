@@ -84,20 +84,22 @@ p.legend.orientation = "horizontal"
 
 def call_back(attr, old, new):
     # question a
+    global selected_date
+    selected_date = date_picker.value
     increase_case = {"date": [selected_date], "confirm case": []}
     for i in range(len(total_data["date"]) - 1):
         if total_data["date"][i] == selected_date:
             increase_case["confirm case"].append(
                 total_data["confirmed_cases"][i] - total_data["confirmed_cases"][i + 1])
 
-    source_q1 = ColumnDataSource(increase_case)
+    source_q1.data = increase_case
 
 
     # question b,c
     some = race_data[(race_data["age"] == "all") & (race_data["date"] == selected_date)]
     particular_column = ["date", "race", "confirmed_cases_percent", "deaths_percent", "population_percent"]
     particular_data = some[particular_column]
-    source_q23 = ColumnDataSource(data=particular_data)
+    source_q23.data = particular_data
 
 date_picker.on_change("value", call_back)
 q1 = column(introduce_of_data,date_picker,data_table1)
