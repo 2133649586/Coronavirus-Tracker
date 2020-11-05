@@ -5,7 +5,7 @@ RUN git clone https://github.com/2133649586/Coronavirus-Tracker
 
 RUN conda install -c conda-forge yarn
 
-RUN cd covid19-tracker && yarn install
+RUN cd Coronavirus-Tracker && yarn install
 
 RUN pip install pandas
 
