@@ -5,6 +5,7 @@ introduce: the objective of this project is use bokeh to visualize the data of c
 1 first step
 Clone files in this github reposiroty to local machine.
 Create new environment on machine named dsci560H5 under the directory of clone file.
+pip install pip virtualenv
 ![](https://github.com/2133649586/imag/blob/main/%E6%88%AA%E5%B1%8F2020-11-05%2013.14.53.png)
 
 2 second step
