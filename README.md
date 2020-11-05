@@ -17,6 +17,7 @@ Activate the environment and install ONLY the dependencies you need to execute t
 Execute the resulting.py by bokeh serve under the fold with resulting.py file
 ![](https://github.com/2133649586/imag/blob/main/%E6%88%AA%E5%B1%8F2020-11-05%2013.23.49.png)
 
+
 # Dokeh
 1. you need ensure that the docker desktop is already download in you local machine.
   download address: https://www.docker.com/products/docker-desktop.
@@ -26,6 +27,9 @@ Execute the resulting.py by bokeh serve under the fold with resulting.py file
   RUN: docker build -t covid
 4. run the image in terminal with port(5006)
   RUN: docker run -p 5006:5006 -it covid
+5. copy the link to browser, the web will show the result
+  http://localhost:5006/resulting
+  
 
 # result show
 this area show the source of data, and the last update date of these data sets.
